@@ -1,6 +1,7 @@
 import React from "react";
 import './SearchComponent.css';
 import type { ResultSuggestion } from "../../Types";
+import ToggleSwitch from "./toggleSwitch";
 
 interface SearchSectionProps {
     title: string;
@@ -8,7 +9,7 @@ interface SearchSectionProps {
     description: string;
     setDescription: (value: string) => void;
     searchByDescription: boolean;
-    toggleSearchByDescription: boolean;
+    toggleSearchByDescription: () => void;
     handleSearchMovies: () => void;
     inputsDisabled: boolean;
     suggestions: ResultSuggestion[];
@@ -35,7 +36,11 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
         <section className="searchSection">
             <h1>Ready to find your next movie?</h1>
 
-            {/*<ToggleSwitch /> */}
+            <ToggleSwitch 
+            label="Search by description"
+            checked={searchByDescription}
+            onChange={toggleSearchByDescription}
+            disabled={inputsDisabled}/>
             <form onSubmit={handleSubmit}>
                 <div className={`searchSection ${searchByDescription ? 'hideSection' : 'showSection'}`}>
                     <h2>Search similar movies by title</h2>

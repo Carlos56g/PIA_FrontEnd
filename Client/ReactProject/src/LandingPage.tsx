@@ -1,5 +1,6 @@
 import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent';
+import { useState } from 'react';
 
 function LandingPage() {
   return (
