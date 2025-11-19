@@ -1,4 +1,5 @@
 import './LandingPage.css'
+import './Components/Sections/SearchComponent'
 
 function LandingPage() {
   return (
