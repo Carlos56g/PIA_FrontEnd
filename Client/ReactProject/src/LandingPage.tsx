@@ -1,19 +1,31 @@
 import './LandingPage.css'
-import './Components/Sections/SearchComponent'
+import SearchComponent from './Components/Sections/SearchComponent';
 
 function LandingPage() {
   return (
     <>
     
-    <>HeaderComponent</>
+      <>HeaderComponent</>
 
-    <>RecomendationsComponent</>
+      <>RecomendationsComponent</>
 
-    <>SearchComponent</>
+      <SearchComponent
+        title={title}
+        setTitle={setTitle}
+        description={description}
+        setDescription={setDescription}
+        searchByDescription={searchByDescription}
+        toggleSearchByDescription={toggleSearchByDescription}
+        handleSearchMovies={handleSearchMovies}
+        inputsDisabled={inputsDisabled}
+        setSuggestions={setSuggestions}
+        suggestions={suggestions}
+      />
 
-    <>ResultsComponent</>
 
-    <>FooterComponent</>
+      <>ResultsComponent</>
+
+      <>FooterComponent</>
 
     </>
   )
