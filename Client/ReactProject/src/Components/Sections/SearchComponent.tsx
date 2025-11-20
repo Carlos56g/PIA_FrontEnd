@@ -1,7 +1,9 @@
 import React from "react";
 import './SearchComponent.css';
 import type { ResultSuggestion } from "../../Types";
+import { movieForMeApiURL } from "../../APIs/config";
 import ToggleSwitch from "./toggleSwitch";
+import SearchBar from "./searchBar";
 
 interface SearchSectionProps {
     title: string;
@@ -44,7 +46,12 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
             <form onSubmit={handleSubmit}>
                 <div className={`searchSection ${searchByDescription ? 'hideSection' : 'showSection'}`}>
                     <h2>Search similar movies by title</h2>
-                    {/*<SearchBar />*/}
+                    <SearchBar searchValue = {title}
+                        setSearchValue={setTitle}
+                        searchAPIURL={`${movieForMeApiURL}search/title`}
+                        setSuggestions={setSuggestions}
+                        suggestions={suggestions}
+                        />
                 </div>
 
                 <div className={`searchSection ${searchByDescription ? 'showSection' : 'hideSection'}`}>
