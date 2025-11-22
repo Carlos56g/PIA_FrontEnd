@@ -6,6 +6,8 @@ import ToggleSwitch from "../Elements/toggleSwitch";
 import SearchBar from "../Elements/searchBar";
 import { useState } from 'react';
 import axios,{AxiosError} from 'axios';
+import ErrorCard from "../Elements/ErrorCard";
+import LoadingDots from "../Elements/LoadingDots";
 
 interface SearchSectionProps {
     setMovieForMeResponse: (val: MovieResponse) => void;
@@ -104,6 +106,8 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
   }
 
     return (
+        <>
+        
         <section className="searchSection">
             <h1>Ready to find your next movie?</h1>
             <ToggleSwitch
@@ -135,6 +139,12 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
                 </button>
             </form>
         </section>
+
+        <LoadingDots show={showLoading} />
+
+        <ErrorCard error={error} show={showError} />
+
+        </>
     )
 }
 export default SearchComponent;

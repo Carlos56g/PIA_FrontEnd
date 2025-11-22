@@ -12,7 +12,7 @@ export interface MovieResponse {
 }
 
 export interface APIError {
-    Detail: string;
+    detail: string; //Needs to be lower case, since the class Axios have this element on lowerCase
 }
 
 export interface ResultSuggestion {

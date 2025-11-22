@@ -16,7 +16,7 @@ function LandingPage() {;
       setMovieForMeResponse={setMovieForMeResponse}
       />
 
-      <>ResultsComponent</>
+      <>SearchResultsComponent</>
 
       <>FooterComponent</>
 
