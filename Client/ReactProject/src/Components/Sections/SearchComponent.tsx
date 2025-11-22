@@ -1,14 +1,12 @@
-import React from "react";
 import './SearchComponent.css';
+import React, { useState, useEffect } from "react";
 import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Types";
-import { movieForMeApiURL, omdbAPIURL } from '../../APIs/config';
+import { movieForMeApiURL, omdbAPIURL, defaultPosterRoute } from '../../Resources/config';
+import axios, { AxiosError } from 'axios';
 import ToggleSwitch from "../Elements/ToggleSwitch";
 import SearchBar from "../Elements/SearchBar";
-import { useState, useEffect } from 'react';
-import axios, { AxiosError } from 'axios';
 import ErrorCard from "../Elements/ErrorCard";
 import LoadingDots from "../Elements/LoadingDots";
-
 interface SearchSectionProps {
     setMovieForMeResponse: (value: MovieResponse) => void;
 }
@@ -49,7 +47,6 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
             });
             const updatedResponse = await getPostersURL(res.data);
             setMovieForMeResponse(updatedResponse);
-
         } catch (err) {
             setError(err as AxiosError<APIError>);
         }
@@ -80,10 +77,10 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
     const getPoster = async (title: string) => {
         try {
             const res = await axios.get(`${omdbAPIURL}t=${title}`);
-            return res.data.Poster || "/defaultPoster.svg";
+            return res.data.Poster || defaultPosterRoute;
         }
         catch {
-            return "/defaultPoster.svg";
+            return defaultPosterRoute;
         }
     }
 
