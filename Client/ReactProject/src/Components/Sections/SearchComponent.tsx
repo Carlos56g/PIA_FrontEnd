@@ -1,6 +1,6 @@
 import './SearchComponent.css';
 import React, { useState, useEffect } from "react";
-import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Types";
+import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Resources/Types";
 import { movieForMeApiURL, omdbAPIURL, defaultPosterRoute } from '../../Resources/config';
 import axios, { AxiosError } from 'axios';
 import ToggleSwitch from "../Elements/ToggleSwitch";
@@ -85,16 +85,16 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
     }
 
     useEffect(() => {
-    if (error) {
-        setInputsDisabled(true);
+        if (error) {
+            setInputsDisabled(true);
 
-        const releaseTimer = setTimeout(() => {
-            setInputsDisabled(false);
-        }, 3000);
+            const releaseTimer = setTimeout(() => {
+                setInputsDisabled(false);
+            }, 3000);
 
-        return () => clearTimeout(releaseTimer);
-    }
-}, [error]);
+            return () => clearTimeout(releaseTimer);
+        }
+    }, [error]);
 
     return (
         <>

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import './searchBar.css';
 import axios, { AxiosError } from 'axios';
-import type { ResultSuggestion, APIError } from "../../Types";
+import type { ResultSuggestion, APIError } from "../../Resources/Types";
 import ErrorCard from "./ErrorCard";
 
 interface SearchBarProps {

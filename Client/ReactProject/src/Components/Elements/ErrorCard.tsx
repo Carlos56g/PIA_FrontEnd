@@ -1,5 +1,5 @@
 import type { AxiosError } from "axios";
-import type { APIError } from "../../Types";
+import type { APIError } from "../../Resources/Types";
 import "./ErrorCard.css";
 import { useEffect } from "react";
 

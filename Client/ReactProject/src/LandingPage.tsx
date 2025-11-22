@@ -1,6 +1,6 @@
 import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent'
-import type { MovieResponse } from "./Types";
+import type { MovieResponse } from "./Resources/Types";
 import { useState } from 'react';
 import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
 

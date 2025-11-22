@@ -1,4 +1,4 @@
-import type { MovieResponse } from '../../Types';
+import type { MovieResponse } from '../../Resources/Types';
 import MovieCard from '../Elements/MovieCard';
 import "./SearchResultsComponent.css";
 
