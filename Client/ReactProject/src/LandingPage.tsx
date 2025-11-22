@@ -2,9 +2,11 @@ import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent'
 import type { MovieResponse } from "./Types";
 import { useState } from 'react';
+import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
 
 function LandingPage() {;
   const [movieForMeResponse, setMovieForMeResponse] = useState<MovieResponse | null>(null); //Response by the API (Success)
+
   return (
     <>
 
@@ -16,7 +18,10 @@ function LandingPage() {;
       setMovieForMeResponse={setMovieForMeResponse}
       />
 
-      <>SearchResultsComponent</>
+      <SearchResultsComponent
+      movieForMeResponse={movieForMeResponse}
+      clearResults={() => setMovieForMeResponse(null)}
+      />
 
       <>FooterComponent</>
 

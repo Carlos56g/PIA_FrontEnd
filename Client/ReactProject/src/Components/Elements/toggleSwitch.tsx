@@ -7,15 +7,15 @@ interface ToggleSwitchProps {
     disabled?: boolean;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({label, checked, onChange, disabled = false}) => {
+const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, checked, onChange, disabled = false }) => {
     return (
         <div className={`checkBoxDiv ${disabled ? "disabledInput" : "enabledInput"}`}>
             <label className="switch">
                 {label}
                 <input type="checkbox"
-                checked = {checked}
-                onChange={onChange}
-                disabled = {disabled} />
+                    checked={checked}
+                    onChange={onChange}
+                    disabled={disabled} />
                 <span className="slider"></span>
             </label>
         </div>

@@ -1,0 +1,74 @@
+.sourceMovieCard {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 0;
+    right: 0;
+    transform: translateX(80%);
+}
+
+.sourceMovieCard:hover {
+    transform: translateX(-5%);
+    opacity: 1;
+}
+
+.sourceMovie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verticalMovieTitle {
+    position: fixed;
+    top: 10%;
+    right: 70px;
+    transform: rotate(-90deg) translateY(50%);
+    transform-origin: right top;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 440px;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.verticalMovieTitle p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.moviesRecommendations {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.movieDescription {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1200px) {
+    .moviesRecommendations {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .moviesRecommendations {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .moviesRecommendations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
