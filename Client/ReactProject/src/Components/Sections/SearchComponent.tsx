@@ -20,7 +20,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
     const [title, setTitle] = useState(""); //Title User Input
     const [description, setDescription] = useState(""); //Description User Input
     const [searchByDescription, setSearchByDescription] = useState(false); //Boolean if is search by description
-    const [suggestions, setSuggestions] = useState<ResultSuggestion[]>([]);
+    const [suggestions, setSuggestions] = useState<ResultSuggestion[]>([]); //AutoComplete
     const [inputsDisabled, setInputsDisabled] = useState(false);
     const [showLoading, setShowLoading] = useState(false);
 
@@ -39,18 +39,16 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
     const handleSearchMovies = async () => {
         setShowLoading(true);
         setInputsDisabled(true);
+        setError(null);
         var movieForMeAPIRoute = movieForMeApiURL + "recommendations/";
         try {
             movieForMeAPIRoute += searchByDescription ? "description" : "title";
-
             const res = await axios.post(movieForMeAPIRoute, {
                 Title: title,
                 Description: description
             });
-            setError(null);
             const updatedResponse = await getPostersURL(res.data);
             setMovieForMeResponse(updatedResponse);
-            setInputsDisabled(false);
         } catch (err) {
             setError(err as AxiosError<APIError>);
         }
@@ -60,7 +58,6 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
             setSuggestions([]);
         }
     };
-
 
     const getPostersURL = async (responseData: MovieResponse) => {
         const updatedResponse = { ...responseData };
