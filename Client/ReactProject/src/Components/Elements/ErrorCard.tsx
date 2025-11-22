@@ -11,7 +11,6 @@ interface ErrorCardProps {
 const ErrorCard: React.FC<ErrorCardProps> = ({ error, setError }) => {
     useEffect(() => {
         if (!error) return;
-
         const hideTimer = setTimeout(() => {
 
             // waits to until the Animation finish

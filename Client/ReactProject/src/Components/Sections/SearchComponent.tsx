@@ -2,9 +2,9 @@ import React from "react";
 import './SearchComponent.css';
 import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Types";
 import { movieForMeApiURL, omdbAPIURL } from '../../APIs/config';
-import ToggleSwitch from "../Elements/toggleSwitch";
-import SearchBar from "../Elements/searchBar";
-import { useState } from 'react';
+import ToggleSwitch from "../Elements/ToggleSwitch";
+import SearchBar from "../Elements/SearchBar";
+import { useState, useEffect } from 'react';
 import axios, { AxiosError } from 'axios';
 import ErrorCard from "../Elements/ErrorCard";
 import LoadingDots from "../Elements/LoadingDots";
@@ -41,20 +41,21 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
         setInputsDisabled(true);
         setError(null);
         var movieForMeAPIRoute = movieForMeApiURL + "recommendations/";
+        movieForMeAPIRoute += searchByDescription ? "description" : "title";
         try {
-            movieForMeAPIRoute += searchByDescription ? "description" : "title";
             const res = await axios.post(movieForMeAPIRoute, {
                 Title: title,
                 Description: description
             });
             const updatedResponse = await getPostersURL(res.data);
             setMovieForMeResponse(updatedResponse);
+
         } catch (err) {
             setError(err as AxiosError<APIError>);
         }
         finally {
-            setShowLoading(false);
             setInputsDisabled(false);
+            setShowLoading(false);
             setSuggestions([]);
         }
     };
@@ -85,6 +86,18 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
             return "/defaultPoster.svg";
         }
     }
+
+    useEffect(() => {
+    if (error) {
+        setInputsDisabled(true);
+
+        const releaseTimer = setTimeout(() => {
+            setInputsDisabled(false);
+        }, 3000);
+
+        return () => clearTimeout(releaseTimer);
+    }
+}, [error]);
 
     return (
         <>
