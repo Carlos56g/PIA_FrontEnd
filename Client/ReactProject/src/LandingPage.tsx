@@ -8,24 +8,31 @@ function LandingPage() {;
   const [movieForMeResponse, setMovieForMeResponse] = useState<MovieResponse | null>(null); //Response by the API (Success)
 
   return (
-    <>
-
-      <>HeaderComponent</>
+    <div className='landing-container'>
       
-      <>RecomendationsComponent</>
+      <header className='header-section'>
+        <>HeaderComponent</>
+      </header>
 
-      <SearchComponent
-      setMovieForMeResponse={setMovieForMeResponse}
-      />
+      <main className='main-content'>
+        <>RecomendationsComponent</>
 
-      <SearchResultsComponent
-      movieForMeResponse={movieForMeResponse}
-      clearResults={() => setMovieForMeResponse(null)}
-      />
+        <SearchComponent
+        setMovieForMeResponse={setMovieForMeResponse}
+        />
 
-      <>FooterComponent</>
+        <SearchResultsComponent
+        movieForMeResponse={movieForMeResponse}
+        clearResults={() => setMovieForMeResponse(null)}
+        />
 
-    </>
+      </main>
+      
+      <footer className='footer-section'>
+        <>FooterComponent</>
+      </footer>
+
+    </div>
   );
 }
 
