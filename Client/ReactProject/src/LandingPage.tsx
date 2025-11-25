@@ -1,6 +1,7 @@
 import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent'
 import Header from './Components/Sections/Header';
+import Footer from './Components/Sections/Footer';
 import type { MovieResponse } from "./Resources/Types";
 import { useState } from 'react';
 import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
@@ -30,7 +31,7 @@ function LandingPage() {;
       </main>
       
       <footer className='footer-section'>
-        <>FooterComponent</>
+        <Footer />
       </footer>
 
     </div>
