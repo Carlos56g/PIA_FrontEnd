@@ -1,5 +1,6 @@
 import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent'
+import Header from './Components/Sections/Header';
 import type { MovieResponse } from "./Resources/Types";
 import { useState } from 'react';
 import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
@@ -11,7 +12,7 @@ function LandingPage() {;
     <div className='landing-container'>
       
       <header className='header-section'>
-        <>HeaderComponent</>
+        <Header />
       </header>
 
       <main className='main-content'>

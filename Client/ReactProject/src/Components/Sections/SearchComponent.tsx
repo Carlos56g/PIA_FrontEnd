@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Resources/Types";
 import { movieForMeApiURL, omdbAPIURL, defaultPosterRoute } from '../../Resources/config';
 import axios, { AxiosError } from 'axios';
-import ToggleSwitch from "../Elements/ToggleSwitch";
-import SearchBar from "../Elements/SearchBar";
+import ToggleSwitch from '../Elements/toggleSwitch';
+import SearchBar from '../Elements/searchBar';
 import ErrorCard from "../Elements/ErrorCard";
 import LoadingDots from "../Elements/LoadingDots";
 interface SearchSectionProps {
@@ -100,7 +100,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
         <>
             <section className="searchSection">
 
-                <h1>Ready to find your next movie?</h1>
+                <h2>Ready to find your next movie?</h2>
 
                 <ToggleSwitch
                     label="Search by description"
@@ -110,7 +110,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
 
                 <form onSubmit={handleSubmit}>
                     <div className={`searchSection ${searchByDescription ? 'hideSection' : 'showSection'}`}>
-                        <h2>Search similar movies by title</h2>
+                        <h3>Search similar movies by title</h3>
                         <SearchBar searchValue={title}
                             setSearchValue={setTitle}
                             searchAPIURL={`${movieForMeApiURL}search/title`}
@@ -120,7 +120,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
                     </div>
 
                     <div className={`searchSection ${searchByDescription ? 'showSection' : 'hideSection'}`}>
-                        <h2>Search similar movies by description</h2>
+                        <h3>Search similar movies by description</h3>
                         <textarea value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             disabled={inputsDisabled} />
