@@ -17,12 +17,9 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
 
     const { SourceMovie, MovieRecommendations } = movieForMeResponse;
     return (
-        <section>
+        <section className='background'>
             {SourceMovie.Rating !== 0 ? (
                 <div>
-                    <div className='verticalMovieTitle'>
-                        <p>{SourceMovie.Title}</p>
-                    </div>
                     <div className='sourceMovieCard'>
                         <h3>Tu película</h3>
                         <div className='sourceMovie'>

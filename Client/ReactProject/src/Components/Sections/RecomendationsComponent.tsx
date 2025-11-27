@@ -1,6 +1,7 @@
 import './RecomendationsComponent.css';
 import TextType from '../Elements/TextType';
 
+
 export default function RecomendationsComponent() {
     return (
         <>

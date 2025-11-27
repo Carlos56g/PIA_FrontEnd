@@ -1,6 +1,23 @@
 import './Header.css';
 
 export default function Header() {
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className="header-container">
             <div className="left-side">
@@ -9,9 +26,30 @@ export default function Header() {
             <div className="right-side">
                 <nav>
                     <ul>
-                        <li><a href="./RecomendationsComponent.tsx">Inicio</a></li>
-                        <li><a href="#about">Películas</a></li>
-                        <li><a href="./SearchResultsComponent.tsx">Recomendaciones</a></li>
+                        <li>
+                            <button 
+                                onClick={scrollToTop}
+                                className="nav-button"
+                            >
+                                Inicio
+                            </button>
+                        </li>
+                        <li>
+                            <button 
+                                onClick={() => scrollToSection('recommendations-section')}
+                                className="nav-button"
+                            >
+                                Películas
+                            </button>
+                        </li>
+                        <li>
+                            <button 
+                                onClick={() => scrollToSection('search-section')}
+                                className="nav-button"
+                            >
+                                Búsqueda
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             </div>
