@@ -1,5 +1,7 @@
 import './LandingPage.css'
 import SearchComponent from './Components/Sections/SearchComponent'
+import Header from './Components/Sections/Header';
+import Footer from './Components/Sections/Footer';
 import type { MovieResponse } from "./Resources/Types";
 import { useState } from 'react';
 import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
@@ -8,24 +10,31 @@ function LandingPage() {;
   const [movieForMeResponse, setMovieForMeResponse] = useState<MovieResponse | null>(null); //Response by the API (Success)
 
   return (
-    <>
-
-      <>HeaderComponent</>
+    <div className='landing-container'>
       
-      <>RecomendationsComponent</>
+      <header className='header-section'>
+        <Header />
+      </header>
 
-      <SearchComponent
-      setMovieForMeResponse={setMovieForMeResponse}
-      />
+      <main className='main-content'>
+        <>RecomendationsComponent</>
 
-      <SearchResultsComponent
-      movieForMeResponse={movieForMeResponse}
-      clearResults={() => setMovieForMeResponse(null)}
-      />
+        <SearchComponent
+        setMovieForMeResponse={setMovieForMeResponse}
+        />
 
-      <>FooterComponent</>
+        <SearchResultsComponent
+        movieForMeResponse={movieForMeResponse}
+        clearResults={() => setMovieForMeResponse(null)}
+        />
 
-    </>
+      </main>
+      
+      <footer className='footer-section'>
+        <Footer />
+      </footer>
+
+    </div>
   );
 }
 
