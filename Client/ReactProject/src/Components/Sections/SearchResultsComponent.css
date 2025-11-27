@@ -10,7 +10,7 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* MOBILE FIRST - Search Results Component Simple */
