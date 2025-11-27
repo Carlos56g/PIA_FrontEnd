@@ -6,7 +6,7 @@ export default function RecomendationsComponent() {
         <>
             <div className="recommendations-container">
                 <TextType
-                    text={["¡Bienvenid@ a MovieForMe!", "¿List@ para descubrir nuevas películas?", "¡Disfruta tu experiencia!"]}
+                    text={["¡Bienvenid@ a MoviesForMe!", "¿List@ para descubrir nuevas películas?", "¡Disfruta tu experiencia!"]}
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={true}

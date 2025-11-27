@@ -1,12 +1,26 @@
+/* MOBILE FIRST - Search Bar */
 .autocomplete {
     text-align: left;
-    width: 100%;
+    width: calc(100% - 2rem);
     position: relative;
+    margin: 0 1rem;
+    box-sizing: border-box;
 }
 
 .autocomplete input {
     width: 100%;
     box-sizing: border-box;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #3a3d5c;
+    border-radius: 8px;
+    background-color: #2b2d42;
+    color: #edf2f4;
+}
+
+.autocomplete input:focus {
+    outline: none;
+    border-color: #9da2ff;
 }
 
 .autocomplete ul{
@@ -15,15 +29,25 @@
   margin-top: 0px;
   padding: 0;
   list-style: none;
+  background-color: #2b2d42;
+  border: 1px solid #3a3d5c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .autocomplete li{
-  padding: 8px;
+  padding: 12px 16px;
   cursor: pointer;
+  color: #edf2f4;
+  border-bottom: 1px solid #3a3d5c;
+}
+
+.autocomplete li:last-child {
+  border-bottom: none;
 }
 
 .autocomplete li:hover{
-  color: #747bff;
+  background-color: #3a3d5c;
+  color: #9da2ff;
 }
 
 .autocomplete-loading {
@@ -34,4 +58,22 @@
   top: 0;
   right: 0;
   font-size: 0.9em;
+  color: #9da2ff;
+}
+
+/* TABLET - min-width: 768px */
+@media (min-width: 768px) {
+  .autocomplete {
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+  }
+}
+
+/* DESKTOP - min-width: 1024px */
+@media (min-width: 1024px) {
+  .autocomplete {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+  }
 }
