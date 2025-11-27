@@ -87,6 +87,7 @@ button:focus-visible {
 
   .footer-section {
     padding: 2rem;
+    background-color: #2b2d42;
   }
 
   .footer-section > * {
