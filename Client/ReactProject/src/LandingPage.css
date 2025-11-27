@@ -101,13 +101,4 @@ button:focus-visible {
   }
 }
 
-/* LARGE DESKTOP - min-width: 1440px */
-@media (min-width: 1440px) {
-  .main-content,
-  .header-section,
-  .footer-section {
-    max-width: 1400px;
-  }
-}
-
 

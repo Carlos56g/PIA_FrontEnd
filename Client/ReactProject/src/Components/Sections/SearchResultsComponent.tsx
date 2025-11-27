@@ -24,7 +24,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
                         <p>{SourceMovie.Title}</p>
                     </div>
                     <div className='sourceMovieCard'>
-                        <h3>Your Movie</h3>
+                        <h3>Tu película</h3>
                         <div className='sourceMovie'>
                             <MovieCard movie={SourceMovie} />
                         </div>
@@ -32,7 +32,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
                 </div>
             ) : (
                 <div className='sourceDescriptionCard'>
-                    <h3>Your Description</h3>
+                    <h3>Ingresa tu descripción</h3>
                     <div className='sourceMovie'>
                         <div className='movieDescription'>
                             <h2>{SourceMovie.Title}</h2>
@@ -41,7 +41,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
                 </div>
             )}
 
-            <h3>Our Recommendations</h3>
+            <h3>Nuestras recomendaciones</h3>
             <div className='moviesRecommendations'>
                 {MovieRecommendations.map((movie, index) => (
                     <div key={index}>
@@ -50,7 +50,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
                 ))}
             </div>
 
-            <button onClick={clearResults}>Clear Results</button>
+            <button onClick={clearResults}>Limpiar resultados</button>
         </section>
     );
 };

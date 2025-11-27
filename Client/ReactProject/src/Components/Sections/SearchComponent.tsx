@@ -100,17 +100,17 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
         <>
             <section className="searchSection">
 
-                <h2>Ready to find your next movie?</h2>
+                <h2>¿List@ para encontrar tu próxima película?</h2>
 
                 <ToggleSwitch
-                    label="Search by description"
+                    label="Buscar por descripción"
                     checked={searchByDescription}
                     onChange={toggleSearchByDescription}
                     disabled={inputsDisabled} />
 
                 <form onSubmit={handleSubmit}>
                     <div className={`searchSection ${searchByDescription ? 'hideSection' : 'showSection'}`}>
-                        <h3>Search similar movies by title</h3>
+                        <h3>Buscar películas similares por título</h3>
                         <SearchBar searchValue={title}
                             setSearchValue={setTitle}
                             searchAPIURL={`${movieForMeApiURL}search/title`}
@@ -120,7 +120,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
                     </div>
 
                     <div className={`searchSection ${searchByDescription ? 'showSection' : 'hideSection'}`}>
-                        <h3>Search similar movies by description</h3>
+                        <h3>Buscar películas similares por descripción</h3>
                         <textarea value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             disabled={inputsDisabled} />
@@ -128,7 +128,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
 
                     <button type="submit"
                         disabled={inputsDisabled}>
-                        Search
+                        Buscar
                     </button>
                 </form>
             </section>

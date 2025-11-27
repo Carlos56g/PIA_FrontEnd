@@ -3,6 +3,7 @@ import SearchComponent from './Components/Sections/SearchComponent'
 import Header from './Components/Sections/Header';
 import Footer from './Components/Sections/Footer';
 import type { MovieResponse } from "./Resources/Types";
+import RecomendationsComponent from './Components/Sections/RecomendationsComponent';
 import { useState } from 'react';
 import SearchResultsComponent from './Components/Sections/SearchResultsComponent';
 
@@ -17,7 +18,7 @@ function LandingPage() {;
       </header>
 
       <main className='main-content'>
-        <>RecomendationsComponent</>
+        <RecomendationsComponent />
 
         <SearchComponent
         setMovieForMeResponse={setMovieForMeResponse}

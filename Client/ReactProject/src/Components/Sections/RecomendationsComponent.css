@@ -1,0 +1,47 @@
+/* MOBILE FIRST - Recommendations Component */
+.recommendations-container {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #edf2f4;
+  margin: 0;
+}
+
+.hero-text .text-type__cursor {
+  color: #edf2f4;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+/* TABLET - min-width: 768px */
+@media (min-width: 768px) {
+  .recommendations-container {
+    padding: 3rem 2rem;
+  }
+  
+  .hero-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* DESKTOP - min-width: 1024px */
+@media (min-width: 1024px) {
+  .recommendations-container {
+    padding: 4rem 2rem;
+  }
+  
+  .hero-text {
+    font-size: 3.2rem;
+    line-height: 1.1;
+  }
+}
