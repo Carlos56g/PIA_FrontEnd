@@ -17,12 +17,12 @@ function LandingPage() {;
       </header>
 
       <main className='main-content'>
-        <>RecomendationsComponent</>
+        {/* TODO:<>RecomendationsComponent</> */}
 
         <SearchComponent
         setMovieForMeResponse={setMovieForMeResponse}
         />
-
+        
         <SearchResultsComponent
         movieForMeResponse={movieForMeResponse}
         clearResults={() => setMovieForMeResponse(null)}

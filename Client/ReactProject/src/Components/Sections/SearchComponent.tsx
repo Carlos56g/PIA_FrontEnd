@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import type { ResultSuggestion, APIError, MovieResponse, Movie } from "../../Resources/Types";
 import { movieForMeApiURL, omdbAPIURL, defaultPosterRoute } from '../../Resources/config';
 import axios, { AxiosError } from 'axios';
-import ToggleSwitch from '../Elements/toggleSwitch';
-import SearchBar from '../Elements/searchBar';
+import ToggleSwitch from '../Elements/ToggleSwitch';
+import SearchBar from '../Elements/SearchBar';
 import ErrorCard from "../Elements/ErrorCard";
 import LoadingDots from "../Elements/LoadingDots";
 interface SearchSectionProps {
@@ -107,7 +107,7 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
                     checked={searchByDescription}
                     onChange={toggleSearchByDescription}
                     disabled={inputsDisabled} />
-
+                    <br></br>
                 <form onSubmit={handleSubmit}>
                     <div className={`searchSection ${searchByDescription ? 'hideSection' : 'showSection'}`}>
                         <h3>Search similar movies by title</h3>
@@ -118,7 +118,6 @@ const SearchComponent: React.FC<SearchSectionProps> = ({
                             suggestions={suggestions}
                         />
                     </div>
-
                     <div className={`searchSection ${searchByDescription ? 'showSection' : 'hideSection'}`}>
                         <h3>Search similar movies by description</h3>
                         <textarea value={description}
