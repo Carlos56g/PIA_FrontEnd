@@ -23,7 +23,7 @@ function LandingPage() {;
         <SearchComponent
         setMovieForMeResponse={setMovieForMeResponse}
         />
-
+        
         <SearchResultsComponent
         movieForMeResponse={movieForMeResponse}
         clearResults={() => setMovieForMeResponse(null)}
