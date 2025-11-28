@@ -85,13 +85,7 @@ button:focus-visible {
     padding: 0 2rem;
   }
 
-  .footer-section {
-    padding: 2rem;
-    background-color: #2b2d42;
-  }
-
   .footer-section > * {
-    max-width: 1200px;
     margin: 0 auto;
   }
 

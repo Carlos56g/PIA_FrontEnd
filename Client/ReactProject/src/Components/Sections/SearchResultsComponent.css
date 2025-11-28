@@ -71,3 +71,15 @@
         gap: 2rem;
     }
 }
+
+/* DESKTOP - min-width: 1500px */
+@media (min-width: 1500px) {
+    .background {
+        padding: 3rem;
+    }
+
+    .moviesRecommendations {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+}

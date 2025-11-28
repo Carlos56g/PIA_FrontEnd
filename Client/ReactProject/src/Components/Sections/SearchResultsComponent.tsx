@@ -22,6 +22,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
                 <div>
                     <div className='sourceMovieCard'>
                         <h3>Tu película</h3>
+                        <br></br>
                         <div className='sourceMovie'>
                             <MovieCard movie={SourceMovie} />
                         </div>
@@ -39,6 +40,7 @@ const SearchResultsComponent: React.FC<SearchResultsComponentProps> = ({
             )}
 
             <h3>Nuestras recomendaciones</h3>
+            <br></br>
             <div className='moviesRecommendations'>
                 {MovieRecommendations.map((movie, index) => (
                     <div key={index}>
