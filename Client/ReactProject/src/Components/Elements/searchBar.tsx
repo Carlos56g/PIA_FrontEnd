@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import './searchBar.css';
+import './SearchBar.css';
 import axios, { AxiosError } from 'axios';
 import type { ResultSuggestion, APIError } from "../../Resources/Types";
 import ErrorCard from "./ErrorCard";
