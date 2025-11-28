@@ -50,6 +50,7 @@ A continuación, se muestran algunas capturas representativas del proyecto.
 <img width="480" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e7978ec-aa37-44b0-b83b-e0840868d88a" />
 
 ## Pruebalo tu mismo!
-👉 <a href="(https://carlos56g.github.io/PIA_FrontEnd/" target="_blank">
+
+👉 <a href="https://carlos56g.github.io/PIA_FrontEnd/" target="_blank">
 GitHub Pages - Movies For Me
 </a>
