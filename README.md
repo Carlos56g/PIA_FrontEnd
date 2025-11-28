@@ -7,7 +7,10 @@ Este proyecto corresponde al PIA de la clase de **FrontEnd**, y está basado en 
 El proyecto original incluía un sistema de recomendación y un análisis más profundo en temas de machine learning.  
 Puedes consultar la documentación completa y la explicación técnica del sistema en el siguiente enlace:
 
-👉 **[Documentación – Google Drive (PDF en Español)](https://drive.google.com/file/d/15nPV8xrtWlijFu4VL1BO3Rcx3DnA5cxS/view?usp=sharing)**
+👉 <a href="https://drive.google.com/file/d/15nPV8xrtWlijFu4VL1BO3Rcx3DnA5cxS/view?usp=sharing" target="_blank">
+Documentación – Google Drive (PDF en Español)
+</a>
+
 
 ---
 
