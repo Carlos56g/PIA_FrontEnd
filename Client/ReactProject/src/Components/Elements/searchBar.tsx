@@ -61,7 +61,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchValue, setSearchValue, sear
                 placeholder="Seach movies..."
             />
 
-            {isLoading && <div className="autocomplete-loading">Loading...</div>}
+            {isLoading && <div className="autocomplete-loading">Cargando...</div>}
 
             {suggestions.length > 0 && (
                 <ul>

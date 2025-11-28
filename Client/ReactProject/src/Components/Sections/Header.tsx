@@ -9,9 +9,9 @@ export default function Header() {
             <div className="right-side">
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Movies</a></li>
-                        <li><a href="#contact">Recommendations</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#peliculas">Películas</a></li>
+                        <li><a href="#busqueda">Búsqueda</a></li>
                     </ul>
                 </nav>
             </div>

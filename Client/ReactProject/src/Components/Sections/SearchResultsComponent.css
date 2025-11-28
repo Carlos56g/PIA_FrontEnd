@@ -1,15 +1,29 @@
-.sourceMovieCard {
-    position: fixed;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    top: 0;
-    right: 0;
-    transform: translateX(80%);
+.background {
+    background-color: #2b2d42;
+    width: 100vw;
+    min-height: auto;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-x: hidden;
 }
 
-.sourceMovieCard:hover {
-    transform: translateX(-5%);
-    opacity: 1;
+/* MOBILE FIRST - Search Results Component Simple */
+.sourceMovieCard {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.sourceDescriptionCard {
+    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .sourceMovie {
@@ -18,57 +32,42 @@
     justify-content: center;
 }
 
-.verticalMovieTitle {
-    position: fixed;
-    top: 10%;
-    right: 70px;
-    transform: rotate(-90deg) translateY(50%);
-    transform-origin: right top;
-    background-color: #1a1a1a;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    width: 440px;
-    border-radius: 10px;
-    opacity: 0.6;
-}
-
-.verticalMovieTitle p {
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-}
-
 .moviesRecommendations {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     justify-items: center;
 }
 
 .movieDescription {
-    background-color: #1c1c1c;
-    color: #fff;
+    background-color: #2b2d42;
+    color: #edf2f4;
     border-radius: 12px;
     padding: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid #3a3d5c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1200px) {
-    .moviesRecommendations {
-        grid-template-columns: repeat(4, 1fr);
+/* TABLET - min-width: 768px */
+@media (min-width: 768px) {
+    .background {
+        padding: 2rem;
     }
-}
 
-@media (max-width: 900px) {
-    .moviesRecommendations {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
     .moviesRecommendations {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* DESKTOP - min-width: 1024px */
+@media (min-width: 1024px) {
+    .background {
+        padding: 3rem;
+    }
+
+    .moviesRecommendations {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
     }
 }

@@ -43,15 +43,23 @@
     }
 
     .right-side nav ul li a {
+        background: none;
+        border: none;
         color: #edf2f4;
         text-decoration: none;
         font-size: 1rem;
         font-weight: 500;
+        cursor: pointer;
         transition: color 0.3s ease;
+        font-family: inherit;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        display: inline-block;
     }
 
     .right-side nav ul li a:hover {
         color: #9da2ff;
+        background-color: rgba(157, 162, 255, 0.1);
     }
 }
 

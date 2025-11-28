@@ -22,6 +22,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Ensure page background is the app dark color to avoid white gaps */
+html, body, #root {
+    background-color: #2b2d42;
+}
+
 #root {
     width: 100%;
     min-height: 100vh;
