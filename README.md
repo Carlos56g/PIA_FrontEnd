@@ -25,7 +25,7 @@ Para esta clase, se realizó una reestructuración del proyecto con los siguient
 
 ## 🚀 Tecnologías Utilizadas  
 - React (con Vite)
-- JavaScript / HTML / CSS  
+- TypeScript / HTML / CSS  
 - Google Cloud Run  
 - Node.js  
 - API REST del sistema de recomendación  
